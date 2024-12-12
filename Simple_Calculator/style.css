@@ -1,0 +1,16 @@
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#display{
+    width: 117px;
+    margin-bottom: 10px;
+}
+
+input{
+    width: 25px;
+    margin: 2px;
+}

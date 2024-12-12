@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coin Flipper</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+  <div class="container">
+    <form class="calculator" name="calculator">
+
+      <input type="text" id="display" readonly> <br>
+      <input type="button" value="7" id="numb7" onclick="calculator.display.value += 7">
+      <input type="button" value="8" id="numb8" onclick="calculator.display.value += 8">
+      <input type="button" value="9" id="numb9" onclick="calculator.display.value += 9">
+      <input type="button" value="x" id="double" onclick="calculator.display.value += 'x'"><br>
+      
+      <input type="button" value="4" id="numb4" onclick="calculator.display.value += 4">
+      <input type="button" value="5" id="numb5" onclick="calculator.display.value += 5">
+      <input type="button" value="6" id="numb6" onclick="calculator.display.value += 6">
+      <input type="button" value="-" id="minus" onclick="calculator.display.value += '-'"><br>
+
+      <input type="button" value="1" id="numb1" onclick="calculator.display.value += 1">
+      <input type="button" value="2" id="numb2" onclick="calculator.display.value += 2">
+      <input type="button" value="3" id="numb3" onclick="calculator.display.value += 3">
+      <input type="button" value="+" id="sum" onclick="calculator.display.value += '+'"><br>
+
+      <input type="button" value="c" id="clear" onclick="calculator.display.value = ' ' ">
+      <input type="button" value="0" id="numb0" onclick="calculator.display.value += 0">
+      <input type="button" value="," id="comma" onclick="calculator.display.value += '.'">
+      <input type="button" value="=" id="result" onclick="calculator.display.value = eval(calculator.display.value)"><br>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html> 
