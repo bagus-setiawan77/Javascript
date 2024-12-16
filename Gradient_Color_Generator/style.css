@@ -37,7 +37,7 @@ body{
     grid-area: content;
     margin: 20px;
     border-radius: 20px;
-    background-color: lightgreen;
+    /* background-color: lightgreen; */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 100px);
@@ -56,6 +56,8 @@ body{
     background-color: lightblue;
     padding: 20px;
     align-items: center;
+    border-radius: 20px;
+
 }
 
 .content__container .content__container-kanan{
@@ -65,17 +67,20 @@ body{
     background-color: lightblue;
     padding: 20px;
     align-items: center;
+    border-radius: 20px;
 }
 
-.content__container .content__container-kanan .color-hex{
+.content__container-kanan .content-kanan{
     display: flex;
+    flex-direction: column;
 }
 
-.content__container .content__container-kanan .color-hex .hex{
-    width: 100%;
-    background-color: black;
-    z-index: 1;
-}
+.content__container-kanan .content-kanan .color-rgb input{
+    border: none;
+    background: transparent;
+    width: 40px;
+    height: 40px;
+} 
 
 .content__container .content__container-tengah{
     display: flex;
@@ -84,6 +89,8 @@ body{
     background-color: lightblue;
     justify-content: center;
     align-items: center;
+    border-radius: 20px;
+
 }
 
 .content__container .content__container-bawah-kiri{
@@ -93,6 +100,18 @@ body{
     background-color: lightblue;
     padding: 20px;
     align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.content__container-bawah-kiri .content button{
+    outline: none;
+    background: transparent;
+    border: none;
+    font-size: 1.6rem;
+    font-weight: bold;
+    flex-grow: 1;
 }
 
 .content__container .content__container-bawah-kanan{
@@ -102,4 +121,6 @@ body{
     background-color: lightblue;
     padding: 20px;
     align-items: center;
+    border-radius: 20px;
+
 }

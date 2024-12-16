@@ -9,15 +9,14 @@
 </head>
 <body>
     <div class="wrapper">
-        <div class="color__container">
-            color1
+        <div class="color__container" id="gradientBox">
             <!-- <div class="color__container2">color2</div> -->
         </div>
         <div class="content__container">
             <div class="content__container-kiri">
                 <div class="content">
                     <p>content</p>
-                    <select>
+                    <select id="selectMenu">
                         <option value="to top">Top</option>
                         <option value="to right top">Right Top</option>
                         <option value="to right bottom">Right Bottom</option>
@@ -30,23 +29,22 @@
                 </div>
             </div>
             <div class="content__container-kanan">
-                <div class="content">
-                    <p>content</p>
-                    <div class="color-hex">
-                        <div class="hex">hex-1</div>
-                        <div class="hex">hex-2</div>
-                        <div class="hex">hex-3</div>
+                <div class="content-kanan">
+                    <p>Colors</p>
+                    <div class="color-rgb">
+                        <input type="color" value="#ffffff">
+                        <input type="color" value="#ffffff">
                     </div>
                 </div>
             </div>
             <div class="content__container-tengah">
                 <div class="content">
-                    <p>content</p>
+                    <p>background</p>
                 </div>
             </div>
             <div class="content__container-bawah-kiri">
                 <div class="content">
-                    <p>content</p>
+                    <button>CLICK</button>
                 </div>
             </div>
             <div class="content__container-bawah-kanan">
@@ -54,7 +52,7 @@
                     <p>content</p>
                 </div>
             </div>
-            <div class="content__container-kanan">content</div>
+            <div class="content__container-bawah-kanan">content</div>
         </div>
     </div>
     
