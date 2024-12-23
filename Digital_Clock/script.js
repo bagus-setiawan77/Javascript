@@ -1,15 +1,27 @@
-setInterval(counter, 1000)
+function clock() {
+  let time = new Date();
+  let hour = time.getHours();
+  let min = time.getMinutes();
+  let sec = time.getSeconds();
+  session = "AM";
 
-function counter(){
-    let time = new Date()
-    let hour = time.getHours().toString().padStart(2, "0");
-    let minute = time.getMinutes().toString().padStart(2, "0");
-    let second = time.getSeconds().toString().padStart(2, "0");
+  if (hour == 0) {
+    h = 12;
+  }
+  if (hour > 12) {
+    hour = hour - 12;
+    session = "PM";
+  }
 
-    let minutesC = minute.toString()
-    let minuteF = minutesC.padStart(2,"0")
+  hour = hour < 10 ? "0" + hour : hour;
+  min = min < 10 ? "0" + min : min;
+  sec = sec < 10 ? "0" + sec : sec;
 
-    let currentTime = hour + ":" + minute + ":" + second;
+  let currentTime = hour + ":" + min + ":" + sec + " " + session;
 
-    document.getElementById('dummyTime').innerHTML = currentTime;
+  document.getElementById("display").innerHTML = currentTime;
+
+  setTimeout(clock, 1000);
 }
+
+clock();
