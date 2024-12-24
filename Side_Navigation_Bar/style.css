@@ -19,6 +19,11 @@ body{
     border-radius: 16px;
     background: #605E5F ;
     height: calc(100vh - 32px);
+    transition: .3s ease;
+}
+
+.sidebar.collapse{
+    width: 85px;
 }
 
 .sidebar .sidebar-header{
@@ -47,13 +52,60 @@ body{
     align-items: center;
     border-radius: 8px;
     border: none;
+    transition: .3s ease;
+}
 
+.sidebar-header .sidebar-toggler{
+    position: absolute;
+    right: 24px;    
+    transition: .2s ease;
+}
+
+.sidebar-header .sidebar-toggler:hover{
+    background: #8E8E8E;
+    color: white;
+}
+.sidebar.collapse .sidebar-header .sidebar-toggler{
+    transform: translateY(60px);
 }
 
 .sidebar-header .toggler span{
     font-size: 1.75rem;
+    transition: .3s ease;
 }
 
+.sidebar.collapse .sidebar-header .sidebar-toggler span{
+    transform: rotate(180deg);
+}
+
+.sidebar-nav .nav-item{
+    position: relative;
+}
+
+.sidebar-nav .nav-tooltip {
+  position: absolute;
+  top: -11px;
+  opacity: 0;
+  color: #151A2D;
+  display: none;
+  pointer-events: none;
+  padding: 6px 12px;
+  border-radius: 8px;
+  white-space: nowrap;
+  background: #fff;
+  left: calc(100% + 25px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  transition: 0s;
+}
+.sidebar.collapse .sidebar-nav .nav-tooltip {
+  display: block;
+}
+.sidebar-nav .nav-item:hover .nav-tooltip {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(50%);
+  transition: all 0.4s ease;
+}
 
 .sidebar-nav .nav-list{
     list-style: none;
@@ -61,6 +113,16 @@ body{
     gap: 4px;
     padding: 0 15px;
     flex-direction: column;
+    transition: all .3s ease;
+}
+
+.sidebar-nav .sidebar.collapse .sidebar-nav .nav-list{
+    list-style: none;
+    display: flex;
+}
+
+.sidebar.collapse .sidebar-nav .primary-nav{
+    transform: translateY(50px);
 }
 
 .sidebar-nav .nav-link{
@@ -68,11 +130,21 @@ body{
     display: flex;
     text-decoration: none;
     /* background-color: black; */
+    white-space: nowrap;
     gap: 12px;
     padding: 12px 15px;
     border-radius: 8px;
     align-items: center;
     transition: .3s ease;
+}
+
+.sidebar .sidebar-nav .nav-link .nav-label{
+    transition: opacity .3s ease;
+}
+
+.sidebar.collapse .sidebar-nav .nav-link .nav-label{
+    opacity: 0;
+    pointer-events: none;
 }
 
 .sidebar-nav .nav-link:hover{
